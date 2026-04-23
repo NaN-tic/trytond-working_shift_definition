@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="working_shift_definition_view_form">
+            <field name="model">working.shift.definition</field>
+            <field name="type">form</field>
+            <field name="name">working_shift_definition_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="working_shift_definition_view_list">
+            <field name="model">working.shift.definition</field>
+            <field name="type">tree</field>
+            <field name="name">working_shift_definition_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_working_shift_definition">
+            <field name="name">Working Shift Definitions</field>
+            <field name="res_model">working.shift.definition</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_working_shift_definition_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="working_shift_definition_view_list"/>
+            <field name="act_window" ref="act_working_shift_definition"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_working_shift_definition_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="working_shift_definition_view_form"/>
+            <field name="act_window" ref="act_working_shift_definition"/>
+        </record>
+
+        <menuitem id="menu_working_shift_definition_configuration"
+            name="Configuration"
+            parent="company.menu_company"
+            sequence="0"
+            icon="tryton-settings"/>
+
+        <menuitem
+            parent="menu_working_shift_definition_configuration"
+            action="act_working_shift_definition"
+            sequence="10"
+            id="menu_working_shift_definition"/>
+
+        <record model="ir.model.access" id="access_working_shift_definition">
+            <field name="model">working.shift.definition</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_working_shift_definition_group_admin">
+            <field name="model">working.shift.definition</field>
+            <field name="group" ref="res.group_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>
