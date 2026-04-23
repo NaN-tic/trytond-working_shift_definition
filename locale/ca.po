@@ -1,0 +1,39 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:working.shift.definition:"
+msgid "Start and end time must be different."
+msgstr "L'hora d'inici i la de fi han de ser diferents."
+
+msgctxt "field:working.shift.definition,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:working.shift.definition,start_time:"
+msgid "Start Time"
+msgstr "Hora d'inici"
+
+msgctxt "field:working.shift.definition,end_time:"
+msgid "End Time"
+msgstr "Hora de fi"
+
+msgctxt "field:working.shift.definition,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "model:ir.action,name:act_working_shift_definition"
+msgid "Working Shift Definitions"
+msgstr "Definicions de torns laborables"
+
+msgctxt "model:ir.ui.menu,name:menu_working_shift_definition_configuration"
+msgid "Configuration"
+msgstr "Configuració"
+
+msgctxt "model:ir.ui.menu,name:menu_working_shift_definition"
+msgid "Working Shift Definitions"
+msgstr "Definicions de torns laborables"
+
+msgctxt "model:working.shift.definition,name:"
+msgid "Working Shift Definition"
+msgstr "Definició de torn laborable"
