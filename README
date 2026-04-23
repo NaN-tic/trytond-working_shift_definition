@@ -1,0 +1,5 @@
+Working Shift Definition
+########################
+
+Defines reusable working shifts (for example morning, afternoon and night)
+with start and end times.
