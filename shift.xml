@@ -31,7 +31,7 @@
         <menuitem id="menu_working_shift_definition_configuration"
             name="Configuration"
             parent="company.menu_company"
-            sequence="90"
+            sequence="0"
             icon="tryton-settings"/>
 
         <menuitem
