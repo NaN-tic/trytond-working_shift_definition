@@ -19,7 +19,7 @@ class WorkingShiftDefinition(ModelSQL, ModelView):
         table = cls.__table__()
         cls._sql_constraints += [
             ('different_start_end', Check(table, table.start_time != table.end_time),
-                'Start and end time must be different.'),
+                'working_shift_definition.msg_different_start_end'),
         ]
         cls._order.insert(0, ('start_time', 'ASC'))
 
