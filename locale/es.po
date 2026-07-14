@@ -2,7 +2,7 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:working.shift.definition:"
+msgctxt "model:ir.message,text:msg_different_start_end"
 msgid "Start and end time must be different."
 msgstr "La hora de inicio y la hora de fin deben ser distintas."
 
