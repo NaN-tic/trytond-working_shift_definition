@@ -1,7 +1,9 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 
-from trytond.model import Check, ModelSQL, ModelView, fields
+from trytond.i18n import gettext
+from trytond.model import ModelSQL, ModelView, fields
+from trytond.model.exceptions import ValidationError
 
 
 class WorkingShiftDefinition(ModelSQL, ModelView):
@@ -16,13 +18,16 @@ class WorkingShiftDefinition(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super().__setup__()
-        table = cls.__table__()
-        cls._sql_constraints += [
-            ('different_start_end', Check(table, table.start_time != table.end_time),
-                'working_shift_definition.msg_different_start_end'),
-        ]
         cls._order.insert(0, ('start_time', 'ASC'))
 
     @staticmethod
     def default_active():
         return True
+
+    @classmethod
+    def validate(cls, shifts):
+        super().validate(shifts)
+        for shift in shifts:
+            if shift.start_time == shift.end_time:
+                raise ValidationError(gettext(
+                    'working_shift_definition.msg_different_start_end'))
