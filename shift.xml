@@ -48,13 +48,5 @@
             <field name="perm_delete" eval="False"/>
         </record>
 
-        <record model="ir.model.access" id="access_working_shift_definition_group_admin">
-            <field name="model">working.shift.definition</field>
-            <field name="group" ref="res.group_admin"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_delete" eval="True"/>
-        </record>
     </data>
 </tryton>
